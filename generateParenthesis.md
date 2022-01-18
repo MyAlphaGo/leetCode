@@ -13,9 +13,8 @@ var generateParenthesis = function (n) {
     const dp = (nextCount, backCount, str) => {
         
         if (nextCount === 0) {
-            while (backCount) {
+            while (backCount--) {
                 str += ')';
-                backCount--;
             }
             return result.push(str);
         }
